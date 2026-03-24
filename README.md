@@ -1,87 +1,112 @@
-Fake News Detection System
-📌 Overview
+# 📰 Fake News Detection System (Python)
 
-The Fake News Detection System is a machine learning-based project that identifies whether a given news article is real or fake. It uses Natural Language Processing (NLP) techniques to analyze textual content and classify it accurately.
+## 📌 Overview
 
-🚀 Features
-Detects fake vs real news articles
-Text preprocessing and cleaning
-Machine Learning model for classification
-User-friendly interface (optional: CLI/Web App)
-High accuracy prediction using trained dataset
-🛠️ Technologies Used
-Python 🐍
-Scikit-learn
-Pandas & NumPy
-Natural Language Processing (NLP)
-Matplotlib / Seaborn (for visualization)
-Flask / Streamlit (if web app included)
-📂 Project Structure
+This project is a **Fake News Detection System** built using **Machine Learning in Python**.
+It classifies news articles as **REAL** or **FAKE** based on their text content.
+
+---
+
+## 🚀 Features
+
+* Detects fake vs real news
+* Uses **TF-IDF Vectorization**
+* Trained with **Logistic Regression**
+* Simple and easy to understand
+* Can test custom news input
+
+---
+
+## 🛠️ Technologies Used
+
+* Python
+* Pandas
+* Scikit-learn
+
+---
+
+## 📂 Project Structure
+
+```
 Fake-News-Detection/
-│── data/                # Dataset files
-│── models/              # Saved ML models
-│── notebooks/           # Jupyter notebooks
-│── src/                 # Source code
-│   ├── preprocessing.py
-│   ├── train_model.py
-│   ├── predict.py
-│── app.py               # Web app (if applicable)
-│── requirements.txt
-│── README.md
-⚙️ Installation
-Clone the repository:
+│
+├── detection.py        # Main Python script
+├── News.csv            # Dataset file
+└── README.md           # Project documentation
+```
+
+---
+
+## 📊 Dataset
+
+The dataset contains:
+
+* `text` → News content
+* `label` → REAL / FAKE
+
+Example:
+
+```
+"Government announces new policy", REAL
+"Aliens landed on Earth", FAKE
+```
+
+---
+
+## ⚙️ Installation
+
+1. Clone the repository:
+
+```
 git clone https://github.com/your-username/fake-news-detection.git
 cd fake-news-detection
-Install dependencies:
-pip install -r requirements.txt
-▶️ Usage
-Run Training
-python src/train_model.py
-Run Prediction
-python src/predict.py
-Run Web App (Optional)
-python app.py
-🧠 Model Details
-Algorithms used:
-Logistic Regression
-Naive Bayes
-Passive Aggressive Classifier
-Text vectorization:
-TF-IDF Vectorizer
-Evaluation metrics:
-Accuracy
-Precision
-Recall
-F1-score
-📊 Dataset
-The dataset contains labeled news articles categorized as real or fake.
-Common datasets:
-Kaggle Fake News Dataset
-LIAR Dataset
-📈 Results
-Model	Accuracy
-Logistic Regression	92%
-Naive Bayes	88%
-Passive Aggressive	94%
-🔮 Future Enhancements
-Deep Learning (LSTM, BERT)
-Real-time news API integration
-Browser extension for fake news detection
-Multilingual support
-🤝 Contributing
+```
 
-Contributions are welcome!
+2. Install required libraries:
 
-Fork the project
-Create your feature branch
-Commit your changes
-Push to the branch
-Open a Pull Request
-📜 License
+```
+pip install pandas scikit-learn
+```
 
-This project is licensed under the MIT License.
+---
 
-🙌 Acknowledgements
-Open-source datasets from Kaggle
-Scikit-learn documentation
-NLP research community
+## ▶️ How to Run
+
+Run the Python script:
+
+```
+python detection.py
+```
+
+---
+
+## 🧠 How It Works
+
+1. Load dataset
+2. Split into training and testing data
+3. Convert text into numerical features using TF-IDF
+4. Train model using Logistic Regression
+5. Predict whether news is fake or real
+
+---
+
+## 📈 Output
+
+* Displays model accuracy
+* Predicts custom news input
+
+Example:
+
+```
+Accuracy: 0.85
+Prediction: REAL
+```
+
+---
+
+## 🔮 Future Improvements
+
+* Add GUI using Tkinter
+* Deploy as a web app (Flask/Django)
+* Use advanced models (SVM, Deep Learning)
+* Improve dataset size for better accuracy
